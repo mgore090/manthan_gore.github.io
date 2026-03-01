@@ -1,48 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Manthan Gore - Resume</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 40px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        h2 {
-            color: #34495e;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Manthan Gore | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .skill-bar {
+      height: 10px;
+      background: #e0e0e0;
+      border-radius: 10px;
+    }
+
+    .skill-fill {
+      height: 10px;
+      background: #0d6efd;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #f8f9fa;
+      padding: 30px 0;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
-<div class="container">
-    <h1>Manthan Gore</h1>
-    <p>Senior Java Backend Developer</p>
 
-    <h2>About Me</h2>
-    <p>Experienced Java Developer with expertise in Spring Boot, Microservices, AWS.</p>
+<!-- HERO SECTION -->
+<section id="hero">
+  <div class="container">
+    <h1 class="display-4">Manthan Gore</h1>
+    <p class="lead">I'm <span class="text-primary">Senior Java Developer</span></p>
 
-    <h2>Skills</h2>
+    <div class="mt-3">
+      <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="text-white me-3"><i class="bi bi-github"></i></a>
+      <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">ABOUT</h2>
+    <p class="text-center">
+      Experienced Senior Java Backend Developer specializing in Spring Boot,
+      Microservices, AWS, Kafka and FinTech platforms.
+    </p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section">
+  <div class="container">
+    <h2 class="text-center mb-4">WORK EXPERIENCE</h2>
+
+    <h5>Senior Java Engineer</h5>
+    <p><strong>2022 - Present</strong></p>
     <ul>
-        <li>Java 8+</li>
-        <li>Spring Boot</li>
-        <li>Microservices</li>
-        <li>AWS</li>
-        <li>Kafka</li>
+      <li>Built scalable microservices using Spring Boot</li>
+      <li>Improved API performance by 30%</li>
+      <li>Deployed applications on AWS ECS</li>
     </ul>
+  </div>
+</section>
 
-    <h2>Experience</h2>
-    <p>5+ years in FinTech and backend systems.</p>
+<!-- SKILLS -->
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">SKILLS</h2>
 
-    <h2>+917058805659</h2>
-    <p>Email: mgore090@gmail.com</p>
-</div>
+    <p>Java</p>
+    <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+
+    <p class="mt-3">Spring Boot</p>
+    <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+
+    <p class="mt-3">AWS</p>
+    <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+
+    <p class="mt-3">Kafka</p>
+    <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <div class="container">
+    <h2 class="text-center mb-4">CONTACT</h2>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>Email:</strong> yourmail@gmail.com</p>
+        <p><strong>Location:</strong> Pune, India</p>
+      </div>
+
+      <div class="col-md-6">
+        <form>
+          <input type="text" class="form-control mb-3" placeholder="Your Name">
+          <input type="email" class="form-control mb-3" placeholder="Your Email">
+          <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+          <button class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <h5>Manthan Gore</h5>
+  <p>© 2026 All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
