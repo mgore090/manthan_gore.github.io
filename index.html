@@ -1,226 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Manthan Gore | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    #hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      color: white;
-      display: flex;
-      align-items: center;
-    }
-
-    .section {
-      padding: 60px 0;
-    }
-
-    .skill-bar {
-      height: 10px;
-      background: #e0e0e0;
-      border-radius: 10px;
-    }
-
-    .skill-fill {
-      height: 10px;
-      background: #0d6efd;
-      border-radius: 10px;
-    }
-
-    footer {
-      background: #f8f9fa;
-      padding: 30px 0;
-      text-align: center;
-    }
-
-    /* Base styles for the contact section */
-  .contact-section {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    gap: 32px; /* Space between each item */
-    padding: 20px;
-  }
-
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 24px; /* Space between icon and text */
-  }
-
-  /* The light blue circle behind the icon */
-  .icon-wrapper {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #eff5fc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  /* Setting the color and stroke of the SVG icons */
-  .icon-wrapper svg {
-    width: 28px;
-    height: 28px;
-    fill: none;
-    stroke: #1a73e8; /* Blue color matching your image */
-    stroke-width: 1.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 8px; /* Space between title and value */
-  }
-
-  .contact-title {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #475569; /* Dark gray for headings */
-  }
-
-  .contact-value {
-    margin: 0;
-    font-size: 1rem;
-    color: #64748b; /* Lighter gray for text */
-  }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manthan Gore - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-<!-- HERO SECTION -->
-<section id="hero">
-  <div class="container">
-    <h1 class="display-4">Manthan Gore</h1>
-    <p class="lead">I'm <span class="text-primary">Senior Java Developer</span></p>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#hero" class="active"><i class="fas fa-home"></i></a></li>
+            <li><a href="#about"><i class="fas fa-user"></i></a></li>
+            <li><a href="#work"><i class="fas fa-file-alt"></i></a></li>
+            <li><a href="#skills"><i class="fas fa-lightbulb"></i></a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </nav>
 
-    <div class="mt-3">
-      <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
-      <a href="#" class="text-white me-3"><i class="bi bi-github"></i></a>
-      <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-    </div>
-  </div>
-</section>
+    <main class="main-content">
+        
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                [cite_start]<h1>Manthan Gore [cite: 1]</h1>
+                <p>I'm a <span id="typewriter"></span><span class="cursor">|</span></p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </section>
 
-<!-- ABOUT -->
-<section class="section bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">ABOUT</h2>
-    <p class="text-center">
-      Experienced Senior Java Backend Developer specializing in Spring Boot,
-      Microservices, AWS, Kafka and FinTech platforms.
-    </p>
-  </div>
-</section>
+        <section id="about" class="section">
+            <h2 class="section-title">ABOUT</h2>
+            [cite_start]<p class="summary">Senior Java Backend Developer with 5 + years of experience building scalable enterprise applications using Java 8, Spring Boot, Microservices, REST APIs, Hibernate/JPA, MySQL, and Kafka. [cite: 4] [cite_start]Experienced in Agile delivery, CI/CD pipelines, and working with cross-functional teams. [cite: 6]</p>
+            
+            <div class="about-grid">
+                <div class="about-col">
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> <strong>Birthday:</strong> 7th Sep 1999</li>
+                        <li><i class="fas fa-chevron-right"></i> <strong>Website:</strong> Your Website Here</li>
+                        [cite_start]<li><i class="fas fa-chevron-right"></i> <strong>Phone:</strong> +91 7058805659 [cite: 2]</li>
+                        [cite_start]<li><i class="fas fa-chevron-right"></i> <strong>City:</strong> Pune, Maharashtra [cite: 2]</li>
+                    </ul>
+                </div>
+                <div class="about-col">
+                    <ul>
+                        <li><i class="fas fa-chevron-right"></i> <strong>Age:</strong> 26</li>
+                        [cite_start]<li><i class="fas fa-chevron-right"></i> <strong>Degree:</strong> B.Tech - Electronics & Communication Engineering [cite: 40]</li>
+                        [cite_start]<li><i class="fas fa-chevron-right"></i> <strong>Email:</strong> mgore090@gmail.com [cite: 2]</li>
+                        <li><i class="fas fa-chevron-right"></i> <strong>Hiring Status:</strong> Available</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<!-- EXPERIENCE -->
-<section class="section">
-  <div class="container">
-    <h2 class="text-center mb-4">WORK EXPERIENCE</h2>
+        <section id="work" class="section">
+            <h2 class="section-title">WORK-EX</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Senior Software Engineer</h4>
+                    [cite_start]<h5>Dec-2024 - Present [cite: 18]</h5>
+                    [cite_start]<p><em>LTIMindtree Pvt Ltd</em> [cite: 16]</p>
+                    <ul>
+                        [cite_start]<li>Developed and enhanced backend microservices supporting credit card banking operations. [cite: 19]</li>
+                        [cite_start]<li>Built REST APIs for user registration, login, profile management, and account verification. [cite: 20]</li>
+                        [cite_start]<li>Implemented RBAC (Role-Based Access Control) to improve security and access control. [cite: 21]</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>Java Developer</h4>
+                    [cite_start]<h5>Apr 2024 - Dec 2024 [cite: 25]</h5>
+                    [cite_start]<p><em>Intellect Design Arena Ltd</em> [cite: 23]</p>
+                    <ul>
+                        [cite_start]<li>Developed Spring Boot microservices for Notional Pooling and Sweeps liquidity workflows. [cite: 26]</li>
+                        [cite_start]<li>Implemented backend logic for real-time interest calculation across corporate accounts. [cite: 27]</li>
+                        [cite_start]<li>Developed REST APIs and documented them using Swagger/OpenAPI. [cite: 28]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <h5>Senior Java Engineer</h5>
-    <p><strong>2022 - Present</strong></p>
-    <ul>
-      <li>Built scalable microservices using Spring Boot</li>
-      <li>Improved API performance by 30%</li>
-      <li>Deployed applications on AWS ECS</li>
-    </ul>
-  </div>
-</section>
+        <section id="skills" class="section">
+            <h2 class="section-title">SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    [cite_start]<span class="skill-name">Java 8 [cite: 9]</span>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill">
+                    [cite_start]<span class="skill-name">Spring Boot [cite: 10]</span>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill">
+                    [cite_start]<span class="skill-name">Microservices [cite: 10]</span>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill">
+                    [cite_start]<span class="skill-name">MySQL / Hibernate [cite: 10, 11]</span>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<!-- SKILLS -->
-<section class="section bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">SKILLS</h2>
-
-    <p>Java</p>
-    <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
-
-    <p class="mt-3">Spring Boot</p>
-    <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
-
-    <p class="mt-3">Microservices</p>
-    <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
-
-    <p class="mt-3">AWS</p>
-    <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
-
-    <p class="mt-3">Kafka</p>
-    <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
-
-    <p class="mt-3">SQL</p>
-    <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<div class="contact-item">
-    <div class="icon-wrapper">
-      <svg viewBox="0 0 24 24">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-        <circle cx="12" cy="10" r="3"></circle>
-      </svg>
-    </div>
-    <div class="contact-details">
-      <h3 class="contact-title">Location:</h3>
-      <p class="contact-value">Hinjewadi Phase 1, Pune</p>
-    </div>
-  </div>
-
-  <div class="contact-item">
-    <div class="icon-wrapper">
-      <svg viewBox="0 0 24 24">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-        <polyline points="22,6 12,13 2,6"></polyline>
-      </svg>
-    </div>
-    <div class="contact-details">
-      <h3 class="contact-title">Email:</h3>
-      <p class="contact-value">mgore090@gmail.com</p>
-    </div>
-  </div>
-
-  <div class="contact-item">
-    <div class="icon-wrapper">
-      <svg viewBox="0 0 24 24">
-        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-        <line x1="12" y1="18" x2="12.01" y2="18"></line>
-      </svg>
-    </div>
-    <div class="contact-details">
-      <h3 class="contact-title">Call:</h3>
-      <p class="contact-value">+91 7058805659</p>
-    </div>
-  </div>
-
-<footer>
-  <h5>Manthan Gore</h5>
-  <p>© 2026 All Rights Reserved</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
