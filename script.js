@@ -1,4 +1,4 @@
-const words = ["Senior Java Backend Developer", "Spring Boot Expert", "Microservices Engineer"];
+const words = ["Java Backend Developer", "Spring Boot Expert", "Microservices Engineer"];
 let i = 0; // Word index
 let j = 0; // Character index
 let currentWord = "";
