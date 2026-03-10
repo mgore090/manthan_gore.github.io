@@ -5,10 +5,8 @@ const EMAILJS_SERVICE_ID  = "service_tu41aq4";
 const EMAILJS_TEMPLATE_ID = "template_muaq4py";
 const EMAILJS_PUBLIC_KEY  = "-kEOLble4yPcILkYG";
 
-// Initialize EmailJS
-(function () {
-    emailjs.init(EMAILJS_PUBLIC_KEY);
-})();
+// Initialize EmailJS (v4 syntax)
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
 // =============================
 // CONTACT FORM HANDLER
@@ -34,12 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
         submitBtn.textContent = "Sending...";
         submitBtn.disabled = true;
 
-        // Variables match kele EmailJS template sathi
         const templateParams = {
-            name:    name,      // {{name}}
-            email:   email,     // {{email}}
-            title:   subject,   // {{title}}
-            message: message    // {{message}}
+            name:    name,
+            email:   email,
+            title:   subject,
+            message: message
         };
 
         emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
