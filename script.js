@@ -1,10 +1,9 @@
 // =============================
 // EMAILJS CONFIGURATION
-// Replace these 3 values with your own from emailjs.com dashboard
 // =============================
-const EMAILJS_SERVICE_ID  = "service_tu41aq4";   // e.g. "service_abc123"
-const EMAILJS_TEMPLATE_ID = "template_muaq4py";  // e.g. "template_xyz789"
-const EMAILJS_PUBLIC_KEY  = "-kEOLbIe4yPcILkYG";   // e.g. "abcDEFghiJKL"
+const EMAILJS_SERVICE_ID  = "service_tu41aq4";
+const EMAILJS_TEMPLATE_ID = "template_muaq4py";
+const EMAILJS_PUBLIC_KEY  = "-kEOLble4yPcILkYG";
 
 // Initialize EmailJS
 (function () {
@@ -21,12 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const name    = form.querySelector("input[type='text']").value.trim();
-        const email   = form.querySelector("input[type='email']").value.trim();
-        const subject = form.querySelectorAll("input[type='text']")[1].value.trim();
+        const inputs  = form.querySelectorAll("input");
+        const name    = inputs[0].value.trim();
+        const email   = inputs[1].value.trim();
+        const subject = inputs[2].value.trim();
         const message = form.querySelector("textarea").value.trim();
 
-        // Basic validation
         if (!name || !email || !subject || !message) {
             showToast("Please fill in all fields.", "error");
             return;
@@ -39,18 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
             from_name:  name,
             from_email: email,
             subject:    subject,
-            message:    message,
-            to_email:   "mgore090@gmail.com"
+            message:    message
         };
 
         emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
             .then(function () {
-                showToast("✅ Message sent! I'll get back to you soon.", "success");
+                showToast("✅ Message sent successfully!", "success");
                 form.reset();
             })
             .catch(function (error) {
                 console.error("EmailJS error:", error);
-                showToast("❌ Failed to send. Please try again or email directly.", "error");
+                showToast("❌ Failed to send. Please try again.", "error");
             })
             .finally(function () {
                 submitBtn.textContent = "Send Message";
@@ -63,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // TOAST NOTIFICATION
 // =============================
 function showToast(message, type) {
-    // Remove existing toast if any
     const existing = document.getElementById("toast");
     if (existing) existing.remove();
 
@@ -82,10 +79,8 @@ function showToast(message, type) {
         font-family: 'Poppins', sans-serif;
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         z-index: 9999;
-        animation: fadeIn 0.3s ease;
     `;
     document.body.appendChild(toast);
-
     setTimeout(() => { if (toast) toast.remove(); }, 4000);
 }
 
@@ -93,23 +88,18 @@ function showToast(message, type) {
 // TYPEWRITER EFFECT
 // =============================
 const words = ["Java Backend Developer", "Spring Boot Expert", "Microservices Engineer"];
-let i = 0;
-let j = 0;
-let currentWord = "";
-let isDeleting = false;
+let i = 0, j = 0, isDeleting = false;
 const typewriterElement = document.getElementById("typewriter");
 
 function type() {
     if (!typewriterElement) return;
-    currentWord = words[i];
+    const currentWord = words[i];
 
-    if (isDeleting) {
-        typewriterElement.textContent = currentWord.substring(0, j - 1);
-        j--;
-    } else {
-        typewriterElement.textContent = currentWord.substring(0, j + 1);
-        j++;
-    }
+    typewriterElement.textContent = isDeleting
+        ? currentWord.substring(0, j - 1)
+        : currentWord.substring(0, j + 1);
+
+    isDeleting ? j-- : j++;
 
     let typingSpeed = isDeleting ? 50 : 100;
 
@@ -125,6 +115,4 @@ function type() {
     setTimeout(type, typingSpeed);
 }
 
-window.onload = function () {
-    type();
-};
+window.onload = function () { type(); };
