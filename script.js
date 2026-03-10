@@ -2,9 +2,9 @@
 // EMAILJS CONFIGURATION
 // Replace these 3 values with your own from emailjs.com dashboard
 // =============================
-const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   // e.g. "service_abc123"
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // e.g. "template_xyz789"
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";   // e.g. "abcDEFghiJKL"
+const EMAILJS_SERVICE_ID  = "service_tu41aq4";   // e.g. "service_abc123"
+const EMAILJS_TEMPLATE_ID = "template_muaq4py";  // e.g. "template_xyz789"
+const EMAILJS_PUBLIC_KEY  = "-kEOLbIe4yPcILkYG";   // e.g. "abcDEFghiJKL"
 
 // Initialize EmailJS
 (function () {
