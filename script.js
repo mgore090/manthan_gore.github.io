@@ -34,11 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
         submitBtn.textContent = "Sending...";
         submitBtn.disabled = true;
 
+        // Variables match kele EmailJS template sathi
         const templateParams = {
-            from_name:  name,
-            from_email: email,
-            subject:    subject,
-            message:    message
+            name:    name,      // {{name}}
+            email:   email,     // {{email}}
+            title:   subject,   // {{title}}
+            message: message    // {{message}}
         };
 
         emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
